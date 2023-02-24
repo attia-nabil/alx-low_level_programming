@@ -1,117 +1,58 @@
-| File                     | Prototype                        |
+Learning Objectives
+At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-| ------------------------ | -------------------------------- |
+General
+What is debugging
+What are some methods of debugging manually
+How to read the error messages
+Copyright - Plagiarism
+You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
+You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
+You are not allowed to publish any content of this project.
+Any form of plagiarism is strictly forbidden and will result in removal from the program.
+Requirements
+General
+Allowed editors: vi, vim, emacs
+All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
+All your files should end with a new line
+Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
+A README.md file at the root of the repo, containing a description of the repository
+A README.md file, at the root of the folder of this project (i.e. 0x03-debugging), describing what this project is about
 
-| `0-isupper.c`            | `int _isupper(int c);`           |
+Tasks
+0. Multiple mains
+mandatory
+In most projects, we often give you only one main file to test with. For example, this main file is a test for a postitive_or_negative() function similar to the one you worked with in an earlier C project:
+Based on the main.c file above, create a file named 0-main.c. This file must test that the function positive_or_negative() gives the correct output when given a case of 0.
 
-| `1-isdigit.c`            | `int _isdigit(int c);`           |
+You are not coding the solution / function, you’re just testing it! However, you can adapt your function from 0x01. C - Variables, if, else, while - Task #0 to compile with this main file to test locally.
 
-| `2-mul.c`                | `int mul(int a, int b);`         |
+You only need to upload 0-main.c and main.h for this task. We will provide our own positive_or_negative() function.
+You are not allowed to add or remove lines of code, you may change only one line in this task.
+1. Like, comment, subscribe
+mandatory
+Copy this main file. Comment out (don’t delete it!) the part of the code that is causing the output to go into an infinite loop.
 
-| `3-print_numbers.c`      | `void print_numbers(void);`      |
+Don’t add or remove any lines of code, as we will be checking your line count. You are only allowed to comment out existing code.
+You do not have to compile with -Wall -Werror -Wextra -pedantic for this task.
+That doesn’t seem right.
 
-| `4-print_most_numbers.c` | `void print_most_numbers(void);` |
+Fix the print_remaining_days() function so that the output works correctly for all dates and all leap years.
 
-| `5-more_numbers.c`       | `void more_numbers(void);`       |
+Line count will not be checked for this task.
+You can assume that all test cases have valid months (i.e. the value of month will never be less than 1 or greater than 12) and valid days (i.e. the value of day will never be less than 1 or greater than 31).
+You can assume that all test cases have valid month/day combinations (i.e. there will never be a June 31st or November 31st, etc.), but not all month/day/year combinations are valid (i.e. February 29, 1991 or February 29, 2427).
 
-| `6-print_line.c`         | `void print_line(int n);`        |
 
-| `7-print_diagonal.c`     | `void print_diagonal(int n);`    |
+2. 0 > 972?
+This program prints the largest of three integers.
+That’s definitely not right.
 
-| `8-print_square.c`       | `void print_square(int size);`   |
+Fix the code in 2-largest_number.c so that it correctly prints out the largest of three numbers, no matter the case.
 
-| `10-print_triangle.c`    | `void print_triangle(int size);` |
+Line count will not be checked for this task.
 
-| `101-print_number.c`     | `void print_number(int n);`      |
+3. Leap year
+mandatory
+This program converts a date to the day of year and determines how many days are left in the year, taking leap year into consideration.
 
-## Tasks :page_with_curl:
-
-* **0. isupper**
-
-  * [0-isupper.c](./0-isupper.c): C function that checks for uppercase characters. Returns
-
-  `1` if the character is uppercase, `0` otherwise.
-
-* **1. isdigit**
-
-  * [1-isdigit.c](./1-isdigit.c): C function that checks for a digit (`0` through `9`).
-
-  Returns `1` if the character is a digit, `0` otherwise.
-
-* **2. Collaboration is multiplication**
-
-  * [2-mul.c](./2-mul.c): C function that multiplies two integers. Returns the value of
-
-  the multiplication.
-
-* **3. The numbers speak for themselves**
-
-  * [3-print_numbers.c](./3-print_numbers.c): C function that prints the numbers `0` to
-
-  `9`, followed by a new line.
-
-* **4. I believe in numbers and signs**
-
-  * [4-print_most_numbers](./4-print_most_numbers.c): C function that prints the numbers
-
-  `0` to `9` except for `2` and `4`, followed by a new line.
-
-* **5. Numbers constitute the only universal language**
-
-  * [5-more_numbers.c](./5-more_numbers.c): C function that prints the numbers `0` to
-
-  `14`, followed by a new line, ten times.
-
-* **6. The shortest distance between two points is a straight line**
-
-  * [6-print_line.c](./6-print_line.c): C function that draws a straight line in the terminal
-
-  using the character `_`, followed by a new line.
-
-    * If the function receives length input of zero or less, only a new line is printed.
-
-* **7. I feel like I am diagonally parked in a parallel universe**
-
-  * [7-print_diagonal.c](./7-print_diagonal.c): C function that draws a diagonal
-
-  line in the terminal using the `\` character, followed by a new line.
-
-    * If the function receives length input of zero or less, only a new line is printed.
-
-* **8. You are so much sunshine in every square inch**
-
-  * [8-print_square.c](./8-print_square.c): C function that prints a square using the `#`
-
-  character, followed by a new line.
-
-    * If the function receives size input of zero or less, only a new line is printed.
-
-* **9. Fizz-Buzz**
-
-  * [9-fizz_buzz.c](./9-fizz_buzz.c): C program that prints the numbers from `1` to
-
-  `100`, but for multiples of three, `Fizz` is printed instead of the number, for
-
-  multiples of five, `Buzz`, and for multiples of both three and five, `FizzBuzz`.
-
-    * Each number or word is separated by a space.
-
-* **10. Triangles**
-
-  * [10-print_triangle.c](./10-print_triangle.c): C function that prints a triangle using
-
-  the `#` character, followed by a new line.
-
-    * If the function receives size input of zero or less, only a new line is printed.
-
-* **11. The problem of distinguishing prime numbers from composite numbers and of resolving the latter into their prime factors is known to be one of the most important and useful in arithmetic**
-
-  * [100-prime_factor.c](./100-prime_factor.c): C program that prints the largest prime factor
-
-  of the number `612852475143`, followed by a new line.
-
-* **12. Numbers have life; they're not just symbols on paper**
-
-  * [101-print_number.c](./101-print_number.c): C function that prints an integer without
-
-  using `long`, arrays, pointers, or hard-coded special values.
